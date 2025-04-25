@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <style>
+      .col {
+        width: 45%;
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="">
+      <div class="row">
+        <div class="col">
+          <img src="${userdir}/sportraad/logo/sportraad_logo.jpg"
+            alt="logo sportraad"
+            title="logo sportraad"
+            width="200"
+          />
+        </div>
+        <div class="col">
+          Burgemeester van Tuinenplein 28<br />
+          8265TJ Kampen<br />
+          penningmeester@sportraadkampen.nl<br />
+          www.sportraadkampen.nl<br />
+          KvK 05072221<br />
+          IBAN NL 81 RABO 0316 6777 95
+        </div>
+      </div>
+    </div>
+    <div style="float: left; clear: both; margin-top: 120px">
+      <div>
+        <div>
+          ${Bedrijfsnaam}<br />
+          ${Straat}<br />
+          ${plaats} ${postcode}
+        </div>
+      </div>
+	  <div style="float:left;clear:both;width:100%">&nbsp;</div>
+      <div style="clear: both; position: relative;margin-bottom:80px">
+        <div style="position: absolute; left: 0pt; width: 192pt">
+          <span style="font-size: 20px"><strong>Factuurnummer: ${actual_year}-${volgnr}</strong></span>
+        </div>
+        <div style="margin-left: 260pt">
+          <span style="font-size: 20px"
+            ><strong>Factuurdatum: ${actual_date}</strong></span
+          >
+        </div>
+      </div>
+      <table width="100%" border="1">
+        <thead>
+          <tr style="color:blue" align="left">
+            <th>Omschrijving</th>
+            <th>Bedrag</th>
+            <th>Subtotaal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr valign="top">
+            <td>
+              Bijdrage over jaar ${actual_year}
+              <p style="height: 90px"></p>
+            </td>
+            <td><span style="float:right">&euro; ${bedrag},00</span></td>
+            <td><span style="float:right">&euro; ${bedrag},00</span></td>
+          </tr>
+          <tr style="font-weight: bold">
+            <td></td>
+            <td>Totaal</td>
+            <td style="height:30px"><span style="float:right">&euro; ${bedrag},00</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="margin-top: 40px; font-weight: bold">
+        Betalingsvoorwaarden: <br />
+        U wordt verzocht het verschuldigde bedrag binnen 30 dagen over te maken op rekening NL 81 RABO 0316 6777 95 t.n.v. Sportraad Kampen onder vermelding van het factuurnummer.
+      </div>
+      <footer style="float: left; clear: both; margin-top: 160px">
+        Sportraad Kampen behartigt de belangen van alle sportverenigingen in de gemeente Kampen
+      </footer>
+    </div>
+  </body>
+</html>

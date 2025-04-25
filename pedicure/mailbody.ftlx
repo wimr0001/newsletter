@@ -1,0 +1,13 @@
+<html>
+<head/>
+<body>
+<p>Beste ${fullname},</p>
+<p>Door een storing op onze server zijn de afspraken die op 1 april zijn geboekt, niet verwerkt. Als u op die dag een afspraak heeft
+ingevoerd, verzoek ik u vriendelijk dit nogmaals te doen.
+<p>Mijn excuses voor dit ongemak</p>
+<p>Met vriendelijke groet,
+<br/>
+Martine v.d. Wiel
+</p>
+</body>
+</html>

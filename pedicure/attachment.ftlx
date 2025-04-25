@@ -1,0 +1,453 @@
+<html>
+
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+        <style>
+            table td {
+                min-height: 80px;
+                border: 1px solid;
+            }
+            .col {
+                width: 45%;
+                float: left;
+            }
+            .noborder {
+                border: 0px;
+            }
+            .very-small {
+                width:6px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="">
+            <div class="row">
+                <div class="col">
+                    <img src="${userdir}/pedicure/logo/logo.png" alt="logo sportraad" title="logo sportraad"
+                         width="200" />
+                </div>
+                <div class="col">
+                    Pedicureinkampen<br />
+                    Lovinkstraat 39<br />
+                    info@pedicureinkampen.nl<br />
+                    www.pedicureinkampen.nl<br />
+                    KvK xxxxxxxxxxxx<br />
+                    IBAN xxxxxxxxxxxxx
+                </div>
+            </div>
+        </div>
+        <div style="float: left; clear: both; margin-top: 60px">
+            <div>
+                <h4 style="display:inline-block">Offerte behandelplan</h4>
+                <span style="display:inline-block;float:right">Datum: ${actual_date}</span>
+            </div>
+            <div style="float: left; clear: both; margin-top: 2px">
+                Client: ${fullname}<br/>
+                E-mailadres: ${email}</br>
+                Offertenummer: ${offertenr}
+            </div>
+            <div style="float: left; clear: both; margin-top: 12px">
+            <p>
+                Hierna treft u uw persoonlijke anamnese aan. Dit is een weergave van de aandoeningen die geconstateerd zijn in en na het intakegesprek. De behandeling die u hierna aantreft, is op maat afgestemd op uw eigen specifieke aandoeningen.
+            </p>
+            <div>
+               <div style="display:inline-block">
+               	<img src="${userdir}/pedicure/icon/red.png"/><span>&nbsp;Besmette nagel&nbsp;&nbsp;</span>
+               </div>
+               <div style="display:inline-block">
+               	<img src="${userdir}/pedicure/icon/gray.png"/><span>&nbsp;Niet-besmette nagel</span>
+               </div>               
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <td class="noborder"></td>
+                        <td colspan="9" style="text-align:center;">Linkerkant</td>
+                        <td colspan="9" style="text-align:center;">rechterkant</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="noborder">Mycose vingers en duimen</td>
+                        <td>
+                            <#if vl5=="0">
+                            <img src="${userdir}/pedicure/icon/5gray.png" />
+                            </#if>
+                            <#if vl5=="1">
+                            <img src="${userdir}/pedicure/icon/5red.png" />
+                            </#if>
+                            <#if vl5=="2">
+                            <img src="${userdir}/pedicure/icon/5gray.png" />
+                            </#if>
+                            <#if vl5=="3">
+                            <img src="${userdir}/pedicure/icon/5red.png" />
+                            </#if>
+                        </td>
+                        <td class="very-small"</td>
+                        <td>
+                            <#if vl4=="0">
+                            <img src="${userdir}/pedicure/icon/4gray.png" />
+                            </#if>
+                            <#if vl4=="1">
+                            <img src="${userdir}/pedicure/icon/4red.png" />
+                            </#if>
+                            <#if vl4=="2">
+                            <img src="${userdir}/pedicure/icon/4gray.png" />
+                            </#if>
+                            <#if vl4=="3">
+                            <img src="${userdir}/pedicure/icon/4red.png" />
+                            </#if>
+                        </td>
+                        <td class="very-small"</td>
+                        <td>
+                            <#if vl3=="0">
+                            <img src="${userdir}/pedicure/icon/3gray.png" />
+                            </#if>
+                            <#if vl3=="1">
+                            <img src="${userdir}/pedicure/icon/3red.png" />
+                            </#if>
+                            <#if vl3=="2">
+                            <img src="${userdir}/pedicure/icon/3gray.png" />
+                            </#if>
+                            <#if vl3=="3">
+                            <img src="${userdir}/pedicure/icon/3red.png" />
+                            </#if>
+                        </td>
+                        <td class="very-small"</td>
+                        <td>
+                            <#if vl2=="0">
+                            <img src="${userdir}/pedicure/icon/2gray.png" />
+                            </#if>
+                            <#if vl2=="1">
+                            <img src="${userdir}/pedicure/icon/2red.png" />
+                            </#if>
+                            <#if vl2=="2">
+                            <img src="${userdir}/pedicure/icon/2gray.png" />
+                            </#if>
+                            <#if vl2=="3">
+                            <img src="${userdir}/pedicure/icon/2red.png" />
+                            </#if>
+                        </td>      
+                        <td class="very-small"</td>
+                        <td>
+                            <#if vl1=="0">
+                            <img src="${userdir}/pedicure/icon/1gray.png" />
+                            </#if>
+                            <#if vl1=="1">
+                            <img src="${userdir}/pedicure/icon/1red.png" />
+                            </#if>
+                            <#if vl1=="2">
+                            <img src="${userdir}/pedicure/icon/1gray.png" />
+                            </#if>
+                            <#if vl1=="3">
+                            <img src="${userdir}/pedicure/icon/1red.png" />
+                            </#if>
+                        </td>    
+                        <td>
+                            <#if vr1=="0">
+                            <img src="${userdir}/pedicure/icon/1gray.png" />
+                            </#if>
+                            <#if vr1=="1">
+                            <img src="${userdir}/pedicure/icon/1red.png" />
+                            </#if>
+                            <#if vr1=="2">
+                            <img src="${userdir}/pedicure/icon/1gray.png" />
+                            </#if>
+                            <#if vr1=="3">
+                            <img src="${userdir}/pedicure/icon/1red.png" />
+                            </#if>
+                        </td>
+                        <td class="very-small"</td>
+                        <td>
+                            <#if vr2=="0">
+                            <img src="${userdir}/pedicure/icon/2gray.png" />
+                            </#if>
+                            <#if vr2=="1">
+                            <img src="${userdir}/pedicure/icon/2red.png" />
+                            </#if>
+                            <#if vr2=="2">
+                            <img src="${userdir}/pedicure/icon/2gray.png" />
+                            </#if>
+                            <#if vr2=="3">
+                            <img src="${userdir}/pedicure/icon/2red.png" />
+                            </#if>
+                        </td>
+                        <td class="very-small"</td>
+                        <td>
+                            <#if vr3=="0">
+                            <img src="${userdir}/pedicure/icon/3gray.png" />
+                            </#if>
+                            <#if vr3=="1">
+                            <img src="${userdir}/pedicure/icon/3red.png" />
+                            </#if>
+                            <#if vr3=="2">
+                            <img src="${userdir}/pedicure/icon/3gray.png" />
+                            </#if>
+                            <#if vr3=="3">
+                            <img src="${userdir}/pedicure/icon/3red.png" />
+                            </#if>
+                        </td>
+                        <td class="very-small"</td>
+                        <td>
+                            <#if vr4=="0">
+                            <img src="${userdir}/pedicure/icon/4gray.png" />
+                            </#if>
+                            <#if vr4=="1">
+                            <img src="${userdir}/pedicure/icon/4red.png" />
+                            </#if>
+                            <#if vr4=="2">
+                            <img src="${userdir}/pedicure/icon/4gray.png" />
+                            </#if>
+                            <#if vr4=="3">
+                            <img src="${userdir}/pedicure/icon/4red.png" />
+                            </#if>
+                        </td>     
+                        <td class="very-small"</td> 
+                        <td>
+                            <#if vr5=="0">
+                            <img src="${userdir}/pedicure/icon/5gray.png" />
+                            </#if>
+                            <#if vr5=="1">
+                            <img src="${userdir}/pedicure/icon/5red.png" />
+                            </#if>
+                            <#if vr5=="2">
+                            <img src="${userdir}/pedicure/icon/5gray.png" />
+                            </#if>
+                            <#if vr5=="3">
+                            <img src="${userdir}/pedicure/icon/5red.png" />
+                            </#if>
+                        </td>  
+                    </tr>                
+                    <tr>
+                        <td class="noborder">Mycose op de teennagels</td>
+                        <td>
+                            <#if l5=="0">
+                            <img src="${userdir}/pedicure/icon/5gray.png" />
+                            </#if>
+                            <#if l5=="1">
+                            <img src="${userdir}/pedicure/icon/5red.png" />
+                            </#if>
+                            <#if l5=="2">
+                            <img src="${userdir}/pedicure/icon/5gray.png" />
+                            </#if>
+                            <#if l5=="3">
+                            <img src="${userdir}/pedicure/icon/5red.png" />
+                            </#if>
+                        </td>
+                        <td class="very-small"</td>
+                        <td>
+                            <#if l4=="0">
+                            <img src="${userdir}/pedicure/icon/4gray.png" />
+                            </#if>
+                            <#if l4=="1">
+                            <img src="${userdir}/pedicure/icon/4red.png" />
+                            </#if>
+                            <#if l4=="2">
+                            <img src="${userdir}/pedicure/icon/4gray.png" />
+                            </#if>
+                            <#if l4=="3">
+                            <img src="${userdir}/pedicure/icon/4red.png" />
+                            </#if>
+                        </td>
+                        <td class="very-small"</td>
+                        <td>
+                            <#if l3=="0">
+                            <img src="${userdir}/pedicure/icon/3gray.png" />
+                            </#if>
+                            <#if l3=="1">
+                            <img src="${userdir}/pedicure/icon/3red.png" />
+                            </#if>
+                            <#if l3=="2">
+                            <img src="${userdir}/pedicure/icon/3gray.png" />
+                            </#if>
+                            <#if l3=="3">
+                            <img src="${userdir}/pedicure/icon/3red.png" />
+                            </#if>
+                        </td>
+                        <td class="very-small"</td>
+                        <td>
+                            <#if l2=="0">
+                            <img src="${userdir}/pedicure/icon/2gray.png" />
+                            </#if>
+                            <#if l2=="1">
+                            <img src="${userdir}/pedicure/icon/2red.png" />
+                            </#if>
+                            <#if l2=="2">
+                            <img src="${userdir}/pedicure/icon/2gray.png" />
+                            </#if>
+                            <#if l2=="3">
+                            <img src="${userdir}/pedicure/icon/2red.png" />
+                            </#if>
+                        </td>      
+                        <td class="very-small"</td>
+                        <td>
+                            <#if l1=="0">
+                            <img src="${userdir}/pedicure/icon/1gray.png" />
+                            </#if>
+                            <#if l1=="1">
+                            <img src="${userdir}/pedicure/icon/1red.png" />
+                            </#if>
+                            <#if l1=="2">
+                            <img src="${userdir}/pedicure/icon/1gray.png" />
+                            </#if>
+                            <#if l1=="3">
+                            <img src="${userdir}/pedicure/icon/1red.png" />
+                            </#if>
+                        </td>      
+                        <td>
+                            <#if r1=="0">
+                            <img src="${userdir}/pedicure/icon/1gray.png" />
+                            </#if>
+                            <#if r1=="1">
+                            <img src="${userdir}/pedicure/icon/1red.png" />
+                            </#if>
+                            <#if r1=="2">
+                            <img src="${userdir}/pedicure/icon/1gray.png" />
+                            </#if>
+                            <#if r1=="3">
+                            <img src="${userdir}/pedicure/icon/1red.png" />
+                            </#if>
+                        </td>
+                        <td class="very-small"</td>
+                        <td>
+                            <#if r2=="0">
+                            <img src="${userdir}/pedicure/icon/2gray.png" />
+                            </#if>
+                            <#if r2=="1">
+                            <img src="${userdir}/pedicure/icon/2red.png" />
+                            </#if>
+                            <#if r2=="2">
+                            <img src="${userdir}/pedicure/icon/2gray.png" />
+                            </#if>
+                            <#if r2=="3">
+                            <img src="${userdir}/pedicure/icon/2red.png" />
+                            </#if>
+                        </td>
+                        <td class="very-small"</td>
+                        <td>
+                            <#if r3=="0">
+                            <img src="${userdir}/pedicure/icon/3gray.png" />
+                            </#if>
+                            <#if r3=="1">
+                            <img src="${userdir}/pedicure/icon/3red.png" />
+                            </#if>
+                            <#if r3=="2">
+                            <img src="${userdir}/pedicure/icon/3gray.png" />
+                            </#if>
+                            <#if r3=="3">
+                            <img src="${userdir}/pedicure/icon/3red.png" />
+                            </#if>
+                        </td>
+                        <td class="very-small"</td>
+                        <td>
+                            <#if r4=="0">
+                            <img src="${userdir}/pedicure/icon/4gray.png" />
+                            </#if>
+                            <#if r4=="1">
+                            <img src="${userdir}/pedicure/icon/4red.png" />
+                            </#if>
+                            <#if r4=="2">
+                            <img src="${userdir}/pedicure/icon/4gray.png" />
+                            </#if>
+                            <#if r4=="3">
+                            <img src="${userdir}/pedicure/icon/4red.png" />
+                            </#if>
+                        </td>      
+                        <td class="very-small"</td>
+                        <td>
+                            <#if r5=="0">
+                            <img src="${userdir}/pedicure/icon/5gray.png" />
+                            </#if>
+                            <#if r5=="1">
+                            <img src="${userdir}/pedicure/icon/5red.png" />
+                            </#if>
+                            <#if r5=="2">
+                            <img src="${userdir}/pedicure/icon/5gray.png" />
+                            </#if>
+                            <#if r5=="3">
+                            <img src="${userdir}/pedicure/icon/5red.png" />
+                            </#if>
+                        </td>  
+                    </tr>
+                    <tr>
+                        <td class="noborder">Mycose tussen de tenen</td>
+                        <td/>
+                        <#if l5 == "2" || l5 == "3"> 
+                        <td style="background-color:#9f1212;"></td>                   
+                        <#else> 
+                        <td/>
+                        </#if>
+                        <td/>
+                        <#if l4 == "2" || l4 == "3"> 
+                        <td style="background-color:#9f1212;"></td>                   
+                        <#else> 
+                        <td/>
+                        </#if>
+                        <td/>
+                        <#if l3 == "2" || l3 == "3"> 
+                        <td style="background-color:#9f1212;"></td>                   
+                        <#else> 
+                        <td/>
+                        </#if>
+                        <td/>  
+                        <#if l2 == "2" || l2 == "3"> 
+                        <td style="background-color:#9f1212;"></td>                   
+                        <#else> 
+                        <td/>
+                        </#if>                     
+                        <td/> 
+                        <td/>
+                        <#if r1 == "2" || r1 == "3"> 
+                        <td style="background-color:#9f1212;"></td>                   
+                        <#else> 
+                        <td/>
+                        </#if>
+                        <td/>
+                        <#if r2 == "2" || r2 == "3"> 
+                        <td style="background-color:#9f1212;"></td>                   
+                        <#else> 
+                        <td/>
+                        </#if>
+                        <td/>
+                        <#if r3 == "2" || r3 == "3"> 
+                        <td style="background-color:#9f1212;"></td>                   
+                        <#else> 
+                        <td/>
+                        </#if>
+                        <td/>  
+                        <#if r4 == "2" || r4 == "3"> 
+                        <td style="background-color:#9f1212;"></td>                   
+                        <#else> 
+                        <td/>
+                        </#if>
+                        <td/>                          
+                    </tr>                
+                </tbody>
+            </table>
+            <p style="page-break-before:always"></p>
+            <h4 style="margin-top:-20px;">1.&nbsp;Schimmel op de voethuid bestrijden</h4>
+            <p style="max-width:80%;">Om de aanwezige schimmel op de huid van de voet te bestrijden, gebruikt u eenmalig de zalf Lamisil Once. Dit antischimmelmiddel bevat de werkzame stof terbinafine dat schimmels en gisten afremt in hun groei. De Lamisil Once brengt u eenmalig aan op de gehele voet vanaf de enkel, tussen de tenen en op de tenen. U maakt de gehele tube leeg. Er mogen geen restanten achter blijven in de tube. Het middel moet 24 uur werken. Dit betekent dat uw voeten geen contact met water mogen hebben binnen 24 uur na het aanbrengen van het middel. Ná 24 uur is de voetschimmel verdwenen; het uiteindelijke herstel van de voethuid duurt 4 á 5 weken. Lees voor het gebruik de bijsluiter! Wanneer u dit product volgens de bijsluiter niet mag gebruiken of wanneer u extra voorzichtig dient te zijn, neem dan contact op met uw huisarts.</p>
+            <p>Hierna treft u de datum aan voor het aanbrengen van Lamisil Once.</p>
+            <table><tr><td>${myutils.getNextDate(lamisildate, 0)}</td><td>Lamisil Once aanbrengen, 24 uur op de huid, geen contact met water.</tr></table>
+<p style="page-break-before:always"></p>
+<h4 style="margin-top:-20px;">2.&nbsp;De besmette nagel(s) zachter maken</h4>        
+<p>Om de nagels beter te kunnen behandelen, moet de besmette nagel zachter gemaakt worden. Dit doet u met de zalf UREA 40. Dit middel bevat de natuurlijke lichaamseigen stof ureum. U brengt UREA 40 op de nagel aan. Zorg ervoor dat u de huid rondom de nagel niet raakt. De huid kan dan mogelijk geïrriteerd raken. Wanneer uw nagel in contact komt met water is dat géén probleem, maar dient u de zalf wel weer opnieuw aan te brengen. De zalf dient immers gedurende 24 uur op de nagel te blijven zitten. De tube is ruim voldoende voor de behandeling. We adviseren u om de tube na gebruik niet wegte gooien, maar te bewaren.</p>
+<p>Hierna treft u de data aan voor het aanbrengen van UREA 40.</p>
+
+<table>
+<tr><td>${myutils.getNextDate(ureastart, 0)}</td><td>Urea-crème aanbrengen 24 uur laten zitten, geen contact met water</td></tr>
+<tr><td>${myutils.getNextDate(ureastart, 1)}</td><td>Ureacreme verwijderen, afspoelen, 24 uur niets doen</td></tr>
+<tr><td>${myutils.getNextDate(ureastart, 2)}</td><td>Urea-crème aanbrengen 24 uur laten zitten, geen contact met water</td></tr>
+<tr><td>${myutils.getNextDate(ureastart, 3)}</td><td>Ureacreme verwijderen, afspoelen, 24 uur niets doen</td></tr>
+<tr><td>${myutils.getNextDate(ureastart, 4)}</td><td>Urea-crème aanbrengen 24 uur laten zitten, geen contact met water</td></tr>
+<tr><td>${myutils.getNextDate(ureastart, 5)}</td><td>Ureacreme verwijderen, afspoelen, 24 uur niets doen</td></tr>
+<tr><td>${myutils.getNextDate(ureastart, 6)}</td><td>Urea-crème aanbrengen 24 uur laten zitten, geen contact met water</td></tr>
+<tr><td>${myutils.getNextDate(ureastart, 7)}</td><td>Urea-crème verwijderen, <strong>Start Behandeling</strong></td></tr>
+</table>
+
+<p>${myutils.getNextDate(ureastart, 7)} stopt u met het aanbrengen van UREA 40 op de beschadigde nagels. De behandeling met de tiptoe producten (zie hierna) kan beginnen.</p>                        
+    </body>
+
+</html>

@@ -1,0 +1,16 @@
+mail.smtp.user=f02b04425a2d3e
+mail.smtp.password=d381a8f3e86375
+mail.name.sendFrom=Wim Roukema
+mail.smtp.host=sandbox.smtp.mailtrap.io
+mail.smtp.port=465
+mail.smtp.ssl.enable=0
+mail.smtp.starttls.enable=0
+mail.test.sendTo=info@mailtrap.io
+mail.subject=Facturatie ${actual_year}
+mail.smtp.cc=
+mail.smtp.timeout=4000
+factuurnr={{yyyy-dd}}
+pdfname=Factuur Sportraad Kampen ${actual_year}-${volgnr}.pdf
+csv.col.emailaddress=emailadres
+csv.col.personalName=Naam ontvanger
+testMode=1

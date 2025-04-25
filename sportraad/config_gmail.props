@@ -1,0 +1,16 @@
+mail.smtp.user=wim.roukema@gmail.com
+mail.smtp.password=vvxmorxfcvicdwnd
+mail.name.sendFrom=Wim Roukema
+mail.smtp.host=smtp.gmail.com
+mail.smtp.port=465
+mail.smtp.ssl.enable=1
+mail.smtp.starttls.enable=0
+mail.test.sendTo=wim.roukema@hotmail.nl
+mail.subject=Facturatie ${actual_year}
+mail.test.sendCC=
+mail.smtp.timeout=4000
+factuurnr={{yyyy-dd}}
+pdfname=Factuur Sportraad Kampen {{factuurnr}}.pdf
+csv.col.emailaddress=emailadres
+csv.col.personalName=Naam ontvanger
+testMode=1

@@ -1,0 +1,15 @@
+mail.smtp.user=f02b04425a2d3e
+mail.smtp.password=d381a8f3e86375
+mail.name.sendFrom=Wim Roukema
+mail.smtp.host=sandbox.smtp.mailtrap.io
+mail.smtp.port=465
+mail.smtp.ssl.enable=0
+mail.smtp.starttls.enable=0
+mail.test.sendTo=info@mailtrap.io
+mail.subject=Facturatie 2024
+mail.smtp.cc=
+mail.smtp.timeout=4000
+pdfname=Offerte ${offertenr}.pdf
+csv.col.emailaddress=emailaddress
+csv.col.personalName=Naam ontvanger
+testMode=1
