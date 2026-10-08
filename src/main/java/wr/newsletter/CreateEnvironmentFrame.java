@@ -103,7 +103,7 @@ public class CreateEnvironmentFrame extends AbstractFrame {
 				File pdfDir = new File(theDir+"/"+PDF_DIR);
 				pdfDir.mkdir();
 				File logoDir = new File(theDir+"/"+LOGO_DIR);
-				pdfDir.mkdir();
+				logoDir.mkdir();
 
 				actionExecuted = true;
 				msgLbl.setText("Omgeving aangemaakt, vul deze directory met je input");

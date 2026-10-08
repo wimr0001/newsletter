@@ -43,7 +43,7 @@ public class MainFrame extends AbstractFrame {
 		super.setParent(this);
 		this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 		this.setSize(500, 480);
-		this.setTitle("Mailingcampagne, kies omgeving");
+		this.setTitle("Versturen e-mails, hoofdscherm");
 		mainPanel = new JPanel();
 		mainPanel.setLayout(null);
 		mainPanel.setSize(this.getWidth(), this.getHeight());
@@ -114,7 +114,12 @@ public class MainFrame extends AbstractFrame {
 					envLabel.setText("Geselecteerde omgeving: " + env);
 					envDir = basePath.getAbsolutePath() + "/" + env + "/";
 					progressDir = envDir + "inprogress/";
-
+					File attach = new File(envDir + "/.no_attachment");
+					if (attach.exists()) {
+						mailWithAttachment = false;
+					} else {
+						mailWithAttachment = true;
+					}
 					if (!checkBaseFiles()) {
 						messageLabel.setText("Er ontbreekt een basisbesteand, .csv, .ftlx, .props bestand");
 						return;
@@ -130,12 +135,7 @@ public class MainFrame extends AbstractFrame {
 					if (!theDir.exists()) {
 						theDir.mkdir();
 					}
-					File attach = new File(envDir + "/.no_attachment");
-					if (attach.exists()) {
-						mailWithAttachment = false;
-					} else {
-						mailWithAttachment = true;
-					}
+
 					actionPanel.setVisible(true);
 					initButton.setEnabled(true);
 					checkInitButton();
@@ -178,7 +178,7 @@ public class MainFrame extends AbstractFrame {
 	}
 
 	private void setHtmlTestButton(JPanel pane) {
-		testButton = new JButton("Test omzetten html naar pdf");
+		testButton = new JButton("Testaanmaak pdf");
 		pane.add(testButton);
 		testButton.setEnabled(true);
 		testButton.setSize(240, 30);

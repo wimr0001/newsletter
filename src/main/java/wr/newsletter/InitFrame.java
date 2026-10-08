@@ -89,26 +89,14 @@ public class InitFrame extends AbstractFrame {
 		this.add(pane);
 		JButton offerButton = new JButton("Ophalen clientgegevens");
 		File offer = new File(envDir + "/.offerte");
-		if (offer.exists()) {
-			offerButton.setSize(240, 30);
-			offerButton.setLocation(10, 10);
-			pane.add(offerButton);
-			offerButton.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					new ClientFrame(env).process();
-				}
-			});
-			skipInputData = true;
-		} else {
-			JLabel lbl1 = new JLabel("Je werkt in directory:");
-			lbl1.setLocation(10, 10);
-			lbl1.setSize(this.getWidth(), 20);
-			pane.add(lbl1);
-			JLabel lbl2 = new JLabel(envDir);
-			lbl2.setLocation(10, 34);
-			lbl2.setSize(this.getWidth(), 20);
-			pane.add(lbl2);
-		}
+		JLabel lbl1 = new JLabel("Je werkt in directory:");
+		lbl1.setLocation(10, 10);
+		lbl1.setSize(this.getWidth(), 20);
+		pane.add(lbl1);
+		JLabel lbl2 = new JLabel(envDir);
+		lbl2.setLocation(10, 34);
+		lbl2.setSize(this.getWidth(), 20);
+		pane.add(lbl2);
 		if (!skipInputData) {
 			String[] csvFiles = this.getCsvFiles(envDir);
 			String[] csvCbList = new String[csvFiles.length + 1];

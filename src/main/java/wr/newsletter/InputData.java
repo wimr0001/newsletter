@@ -37,7 +37,7 @@ public class InputData {
 			String line = null;
 			while ((line = reader.readLine()) != null) {
 				line = line.trim();
-				if (!line.equals("")) {
+				if (!line.equals("") && (line.split(";")).length > 1) {
 					this.addLine(line.trim());
 				}
 			}

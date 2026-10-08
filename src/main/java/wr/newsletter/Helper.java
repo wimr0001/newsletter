@@ -33,9 +33,14 @@ public abstract class Helper {
 		String personalizedContent = "";
 		SimpleDateFormat simpleFormat = new SimpleDateFormat("dd-MM-yyyy");
 		String dateStr = simpleFormat.format(new Date());
+		int year = Integer.valueOf(dateStr.substring(6));
+		int nextYear = year+1;
+		int prevYear = year-1;
 		HashMap<String, Object> map = new HashMap<String, Object>();
 		map.put("userdir", System.getProperty("user.dir"));
 		map.put("actual_year", dateStr.substring(6));
+		map.put("next_year", Integer.valueOf(nextYear).toString());
+		map.put("previous_year", Integer.valueOf(prevYear).toString());
 		map.put("actual_date", dateStr);
 		map.put("myutils", new wr.freemarker.FreemarkerUtil());
 		int i = 0;

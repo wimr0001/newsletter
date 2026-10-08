@@ -6,14 +6,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Properties;
 
-public abstract class App {
-	public static final String CONFIG_FILE = "config.props";
-	public static final String DATA_FILE = "data.csv";
-	public static final String ATTACHMENT_FILE = "attachment.ftlx";
-	public static final String MAILBODY_HTML = "mailbodyhtml.ftlx";
-	public static final String MAILBODY_TEXT = "mailbodytxt.ftlx";
-	public static final String PROGRESS_DIR = "inprogress";
-	public static final String REPORT_DIR = "report";
+public abstract class App implements Constants {
 
 	public static Properties props = new Properties();
 	public String envDir;
@@ -44,14 +37,15 @@ public abstract class App {
 	}
 
 	protected void getDataFile() throws Exception {
-		this.getDataFile(progressDir+DATA_FILE);
+		this.getDataFile(progressDir + DATA_FILE);
 	}
+
 	protected void getDataFile(String file) throws Exception {
 		inputData = new InputData(file);
 		if (inputData.getInputData().size() == 0) {
 			throw new Exception("Geen inputdata gevonden");
 		}
-	}	
+	}
 
 	protected void readDocLines(String filename) throws java.io.IOException {
 		BufferedReader reader = new BufferedReader(new FileReader(filename));
@@ -82,9 +76,11 @@ public abstract class App {
 	protected void writeDataFile() throws Exception {
 		this.inputData.writeDataFile();
 	}
+
 	protected void writeDataFile(String file) throws Exception {
 		this.inputData.writeDataFile(file);
 	}
+
 	public int getColNumber(String parm, ArrayList<String> headers) {
 		int i = 0;
 		for (String header : headers) {
@@ -111,17 +107,23 @@ public abstract class App {
 		int i = 0;
 		int colNumber = 0;
 		for (String col : headers) {
-			if (col.toLowerCase().equals(this.colNameEmail)) {
+			if (col.toLowerCase().equals(this.colNameEmail.toLowerCase())) {
 				colNumber = i;
 			}
 			i++;
 		}
 		String emailaddress = null;
+		int j = 1;
 		for (ArrayList<String> cols : myLines) {
-			emailaddress = cols.get(colNumber).trim();
-			if (!this.isValidEmailAddress(emailaddress)) {
-				processResult.addNotification(i, "Foutief emailadres");
+			if (cols.size() <= colNumber) {
+				processResult.addNotification(j, "Ontbrekend emailadres");
+			} else {
+				emailaddress = cols.get(colNumber).trim();
+				if (!this.isValidEmailAddress(emailaddress)) {
+					processResult.addNotification(j, "Foutief emailadres");
+				}
 			}
+			j++;
 		}
 	}
 

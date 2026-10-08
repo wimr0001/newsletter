@@ -244,7 +244,12 @@ public class StartCampaign extends App {
 				if (var.length() > 7) {
 					internalVar2 = var.substring(0, 7).equals("myutils");
 				}				
-				if (!var.equals("userdir") && !var.equals("actual_date") && !var.equals("actual_year") && !var.equals("volgnr") && !internalVar1 &&!internalVar2) {
+				if (!var.equals("userdir") && !var.equals("actual_date") 
+						&& !var.equals("actual_year")
+						&& !var.equals("next_year")
+						&& !var.equals("previous_year")
+						&& !var.equals("volgnr") 
+						&& !internalVar1 &&!internalVar2) {
 					if (!parmInHeader(var)) {
 						processResult.addNotification(9999,
 								"Parameter " + var + " komt niet voor in de header van de datafile");

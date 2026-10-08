@@ -154,6 +154,12 @@ public class Html2PdfTest extends JFrame implements ActionListener {
 		if (parm.equals("actual_year")) {
 			return true;
 		}
+		if (parm.equals("next_year")) {
+			return true;
+		}
+		if (parm.equals("previous_year")) {
+			return true;
+		}		
 	
 		for (String header : headers) {
 			if (header.equals(parm)) {

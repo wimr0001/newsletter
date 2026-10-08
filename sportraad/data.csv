@@ -1,29 +1,54 @@
-Bankinfo;Bedrijfsnaam;Straat;postcode;plaats;emailadres;bedrag;Naam afzender
-Test1;Test21;Test2;Test3;Test4;wim@wimroukema.nl;10;Piet Jansen
-Test7;Test22;Test8;Test9;Test10;wim.roukema@gmail.com;20;Wim Roukema
-Test1;Test21;Test2;Test3;Test4;wim@wimroukema.nl;10;Piet Jansen
-Test7;Test22;Test8;Test9;Test10;wim.roukema@gmail.com;20;Wim Roukema
-Test1;Test21;Test2;Test3;Test4;wim@wimroukema.nl;10;Piet Jansen
-Test7;Test22;Test8;Test9;Test10;wim.roukema@gmail.com;20;Wim Roukema
-Test1;Test21;Test2;Test3;Test4;wim@wimroukema.nl;10;Piet Jansen
-Test7;Test22;Test8;Test9;Test10;wim.roukema@gmail.com;20;Wim Roukema
-Test1;Test21;Test2;Test3;Test4;wim@wimroukema.nl;10;Piet Jansen
-Test7;Test22;Test8;Test9;Test10;wim.roukema@gmail.com;20;Wim Roukema
-Test1;Test21;Test2;Test3;Test4;wim@wimroukema.nl;10;Piet Jansen
-Test7;Test22;Test8;Test9;Test10;wim.roukema@gmail.com;20;Wim Roukema
-Test1;Test21;Test2;Test3;Test4;wim@wimroukema.nl;10;Piet Jansen
-Test7;Test22;Test8;Test9;Test10;wim.roukema@gmail.com;20;Wim Roukema
-Test1;Test21;Test2;Test3;Test4;wim@wimroukema.nl;10;Piet Jansen
-Test7;Test22;Test8;Test9;Test10;wim.roukema@gmail.com;20;Wim Roukema
-Test1;Test21;Test2;Test3;Test4;wim@wimroukema.nl;10;Piet Jansen
-Test7;Test22;Test8;Test9;Test10;wim.roukema@gmail.com;20;Wim Roukema
-Test1;Test21;Test2;Test3;Test4;wim@wimroukema.nl;10;Piet Jansen
-Test7;Test22;Test8;Test9;Test10;wim.roukema@gmail.com;20;Wim Roukema
-Test1;Test21;Test2;Test3;Test4;wim@wimroukema.nl;10;Piet Jansen
-Test7;Test22;Test8;Test9;Test10;wim.roukema@gmail.com;20;Wim Roukema
-Test1;Test21;Test2;Test3;Test4;wim@wimroukema.nl;10;Piet Jansen
-Test7;Test22;Test8;Test9;Test10;wim.roukema@gmail.com;20;Wim Roukema
-Test1;Test21;Test2;Test3;Test4;wim@wimroukema.nl;10;Piet Jansen
-Test7;Test22;Test8;Test9;Test10;wim.roukema@gmail.com;20;Wim Roukema
-Test1;Test21;Test2;Test3;Test4;wim@wimroukema.nl;10;Piet Jansen
-Test7;Test22;Test8;Test9;Test10;wim.roukema@gmail.com;20;Wim Roukema
+Bankinfo;Bedrijfsnaam;Straat;postcode;plaats;emailadres;bedrag
+55+ Ouderensport Kampen;St. Ouderensport 55 +;Graspieper 20;8271 GV;IJsselmuiden;jacvanderwerf@hetnet.nl;25
+AV ISALA 96 KAMPENIJSSELMUIDEN;AV Isala '96;Plataanstraat 8;8266 BH;Kampen;penningmeester@avisala96.nl ;60
+Badminton Club Kampen;BC Kampen;Aida 14;8265 TG;Kampen;penningmeester@bckampen.nl ;40
+Basketballvereniging Lay Back Kampen;Basketbalvereniging Lay Back;Elzenstraat 14;8266 BL;Kampen;penningmeester@laybackkampen.nl ;25
+Chr. Gymnst Ver. Wilhelmina;Gymnastiekvereniging Wilhelmina;Cantate 24;8265 SC;Kampen;penningmeester@wilhelmina-kampen.nl;60
+Clubhuis Go-Ahead;v.v. GoAhead Kampen;Buitenbroeksweg 2;8260 AD;Kampen;penningmeester@goaheadkampen.nl;60
+De Zwartendijkruiters;De Zwartendijkruiters-Stichting Aangepast Paardrijden;p/a Cantate 22;8271 GV;IJsselmuiden;penningmeester@kjltc.nl;25
+Damclub Strijt Sonder Spijt;Kamper Damclub SSS;H.v.			 20;8266 DP;Kampen;penningmeester@kjltc.nl;25
+IJSSELMUIDER GYMNASTIEK VERENIGING 38;Gymnastiek vereniging IJGV;Graspieper 7;8271 GX;IJsselmuiden;penningmeester@ijgv.nl;60
+Kamper Biljart Club 1911;Kamper Biljart Club;Anjerstraat 18-2;8261LA;Kampen;stamd50@gmail.com;25
+Kamper Juniores Lawn Tennis Club;K.J.L.T.C.;p/a Cellebroeksweg 2a ;8265 PG;Kampen;penningmeester@kjltc.nl;60
+Kamper Roei- en Zeilver. De IJssel;Kamper roei- en Zeilvereniging de IJssel;Boelestraat 22;8271 DW;IJsselmuiden;penningmeester@roeiverenigingdeijssel.nl;25
+Kamper Voetbalvereniging K.H.C.;v.v. KHC;Postbus 4;8260 AK;Kampen;facturen@khc-kampen.nl;60
+KAMPER WIELERCLUB;Kamper Wieler Club;Schansdijk 3;8260 AH;Kampen;ledenadministratie@kwc-kampen.nl;40
+Korfbalvereniging Wit-Blauw;Korfbalvereniging Wit Blauw;Hilbert van Dijkstraat 5;8264 PC ;Kampen;penningmeester@wit-blauw.nl;40
+KV D.O.S. Kampen;Korfbalvereniging DOS Kampen;Ballade 10;8265 SB;Kampen;penningmeester@kvdoskampen.nl;60
+LR en PC De Deltaruiters IJsselmuiden e.o.;Land. Rijver. en Ponyclub de Deltaruiters;Paralelweg 3b;8271 PB;IJsselmuiden;facturendelta@outlook.com;40
+Modelvliegclub Cumulus;Modelvliegclub Cumulus;p/a Schansdijk 7;8263 AZ;Kampen;fransrigterink@online.nl;25
+PAARDENSPORTVERENIGING KAMPEN;PSV Kampen;Zwartendijk 17;8261 XD;Kampen;penningmeester@psvkampen.nl;25
+RK VOETBALVERENIGING KAMPEN;v.v. Kampen;Postbus 415;8266 DC;Kampen;penningmeester@vvkampen.nl;40
+Schaakclub O en O;Kamper Schaakclub O&O;Zalkerdijk 35;8276 AB;Zalk;info@ekkelboomzalk.nl;25
+SKONENVAARDER;Kanovereniging Skonenvaarder;Postbus 309;8266 DV;Kampen;penningmeester@skonenvaarder.nl;25
+Sportver. Kampereiland;Sportvereniging Kampereiland;Stikkenpolderweg 5;8267 AP;Kampen;jjknol@kpnplanet.nl;25
+Sportver. RKDOS Kampen/IJsselmuiden;RK DOS Kampen en IJsselmuiden;Hartogsweg 20;8271 PB;IJsselmuiden;penningmeester@rkdos.nl ;60
+Sportvereniging Zalk;S.V. Zalk;p/a Broeksteeg 42;8263 AZ;Kampen;penningmeestersvzalk@gmail.com;40
+St. Aangepast Sporten Kampen e.o.;Stichting Aangepast Sporten KAMPEN (SASK);Ch. Vermeulenhof 3;8264 CK;Kampen;wilmavrieswijk@hotmail.com;25
+STICHTING FEDERATIE VAN ZAALVOETBALVERENIGINGEN IN KAMPEN;Federatie Zaalvoetbal Kampen;Van Bosseware 7;8283 AZ;Kampen;fzkkampen@fzkkampen.nl;40
+Stichting Martin Gasman;St. Scoutingsgroep Martin Gasman;Van Hasseltstraat 15;8265 ZK;Kampen;timkalter@hotmail.com;40
+Stichting Paardrijden Gehandicapten IJsselmuiden;St. Paardrijden Gehandicapten (SPGIJ);Oosterholtseweg 11B;8265 PD;Kampen;info@spgij.nl;40
+SVV OP DE KORREL;Schietvereniging Op de Korrel;Schansdijk 9;8263 AZ;Kampen;ids.klomp@solcon.nl;25
+Tot Ons Genoegen;IJsclub TOG;Zilverschoon 77;8265 HE;Kampen;azweers@solcon.nl;60
+TTV KAMPENION;Tafeltennisvereniging Kampenion;Noordweg 75;8261 DJ;Kampen;penningmeester@kampenion.nl;25
+VDH KRINGGROEPYSSELMUIDEN;V.D.H. Kringgroep IJsselmuiden;Grafhorsterweg 53b;8271 CB;IJsselmuiden;Rachellavanderhoeven@gmail.com;25
+Voetbal 's Heerenbroek;v.v. 's-Heerenbroek;JW van Lenthestraat 2;8275 AH; 's Heerenbroek;penningmeester@vvsheerenbroek.nl;40
+VOETBALVERENIGING DOOR OEFENING STERK KAMPEN;v.v. Dos Kampen;Postbus 172;8260 AD;Kampen;penningmeester@doskampen.nl;60
+Voetbalvereniging IJ.V.V;v.v. IJ.V.V.;Lijnpad 53;8271 TB;IJsselmuiden;penningmeester@ijvv.nl;60
+Voetbalvereniging Wilsum;v.v. Wilsum;Q.v.Uffordweg 1;8260 AA;Wilsum;penningmeester@vvwilsum.nl;60
+Volleybalvereniging Reflex;Volleybalvereniging Reflex;Dr. Damstraat 1;8274 AV;Kampen;penningmeester@reflexkampen.nl;40
+Volleybalvereniging Set Up;Volleybalvereniging Set-Up;Tuinderij 9;8262 GA;Kampen;penning-meester@setup-ijsselmuiden.nl;40
+VOORUITGANG ZIJ ONS DOEL-VZOD-;IJsclub VZOD;Krabbescheer 64;8265 JE;Kampen;ledenadministratie@ijsclubvzodkampen.nl;60
+Ysselmuider Tennis Club;IJsselmuider Tennisclub;Koraal 28;8262 DP;Kampen;janrozendaal25A@outlook.com;40
+Deltasteur;DeltaSteur;Postbus 54;8014 TA;Zwolle;penningmeester.bestuur@deltasteur.nl;60
+Duikteam De Oester;Duikteam de Oester;De omloop 5 ;8261 LN;Kampen;penningmeester@duikteam-de-oester.nl;25
+Gym- en sportvereniging Wilsum;Gymnastiekvereniging Wilsum;H.Evinkstraat 19;8274 AX;Wilsum;gvwilsum@hotmail.com;25
+Gymnastiekvereniging .s-Heerenbroek;Gymnastiekvereniging 's-Heerenbroek;J.W. van Lenthestraat 8????;8275 AH;'s Heerenbroek;gvsheerenbroek@hotmail.com;25
+GYMNASTIEKVERENIGING DOOR OEFENING STERK KAMPEN;GV DOS Kampen;Zegge 22;8265 CL;Kampen;penningmeester@gvdoskampen.nl;60
+HENGELAARSVERENIGING ONS VERMAAK;Hengelvereniging Ons Vermaak;Dorpsweg 96;8265 PG;Kampen;info@hvonsvermaak.nl ;60
+Hockey Club Kampen;Hockey Club Kampen;Ballade 7;8265 SB;Kampen;penningmeester@hckampen.nl;40
+IJsclub Eensgezindheid;IJsclub Eensgezindheid;Trekvaart 41;8271 AD;IJsselmuiden;penningmeester@ijsclubeensgezindheid.nl;40
+IJsclub 's Heerenbroek-V;IJsclub 's-Heerenbroek-Veecaten;Bisschopswetering 20;8275 AP;'s Heerenbroek;penningmeester@ijsclubsheerenbroekveecaten.nl;40
+"IJsclub Wilsum Vooruit";IJsclub Wilsum Vooruit;Westenbergstraat 22a;8274 AR;Wilsum;jorrian13@hotmail.com;60
+Kamper Bridge Club KBC;Kamper Bridge Club KBC;Silene 69;8265 HP;Kampen;ttruus@icloud.com;25
+Motortoerclub de Steur;Motortoerclub de Steur;Havenweg 7;8262 BZ;Kampen;domselaar@hetnet.nl;25
