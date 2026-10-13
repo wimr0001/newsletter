@@ -2,6 +2,7 @@ package wr.newsletter;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -9,11 +10,13 @@ public class AddData extends App {
 
 	private String addDataFile;
 	private boolean mailWithAttachment;
+	private boolean overwrite;
 
-	public AddData(String envDir, String addDataFile, boolean mailWithAttachment) {
+	public AddData(String envDir, String addDataFile, boolean mailWithAttachment, boolean overwrite) {
 		super(envDir, true, true);
 		this.addDataFile = addDataFile;
 		this.mailWithAttachment = mailWithAttachment;
+		this.overwrite = overwrite;
 	}
 
 	public ProcessResult process() {
@@ -62,9 +65,9 @@ public class AddData extends App {
 			if (processResult.hasResultErrors()) {
 				return processResult;
 			}
-			// copy the new lines to the existing one, if, and only if, there was at least
-			// an e-mail sent
-			if (inputData.isProductionMailSendingInProgress()) {
+			if (!this.overwrite) {
+				// copy the new lines to the existing one, if, and only if, there was at least
+				// an e-mail sent
 				// add the lines
 				for (String addLine : addLines) {
 					inputData.addLine(addLine);
@@ -78,8 +81,42 @@ public class AddData extends App {
 					processResult.addNotification(9999, "Fout opgetreden bij schrijven spreadsheet");
 				}
 			} else {
-				processResult.addNotification(9999, "Er is geen e-mail verstuurd.");
+				return this.overwrite(addLines);
 			}
+		} catch (Exception e) {
+			processResult.addNotification(9999, "Technische fout opgetreden.");
+		}
+
+		return processResult;
+	}
+
+	private ProcessResult overwrite(ArrayList<String> addLines) {
+		String mail = null;
+		ArrayList<ArrayList<String>> data = new ArrayList<ArrayList<String>>(inputData.getDataLines().size());
+		try {
+			for (ArrayList<String> cols : inputData.getDataLines()) {
+				mail = cols.get(cols.size() - 1);
+				if (mail.length() > 5) {
+					if (!mail.substring(0, 5).equals("SENT,")) {
+						data.add(cols);
+						continue;
+					}
+				}
+
+			}
+			inputData.setDataLines(data);
+			for (String addLine : addLines) {
+				inputData.addLine(addLine);
+			}
+			try {
+				Helper.expandCols(inputData, inputData.getDataLines().size(),
+						inputData.getDataLines().size() - addLines.size(), mailWithAttachment);
+				processResult.setInputData(inputData);
+				super.writeDataFile();
+			} catch (Exception e) {
+				processResult.addNotification(9999, "Fout opgetreden bij schrijven spreadsheet");
+			}
+
 		} catch (Exception e) {
 			processResult.addNotification(9999, "Technische fout opgetreden.");
 		}

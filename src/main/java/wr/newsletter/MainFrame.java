@@ -34,6 +34,7 @@ public class MainFrame extends AbstractFrame {
 	private JPanel actionPanel;
 	private boolean dataInProgress;
 	private File dataFile;
+	private short addOrReplaceData = 0; //0 not, 1 = replace and add 2 = add
 
 	public static void main(String[] args) {
 		new MainFrame().setup();
@@ -240,7 +241,7 @@ public class MainFrame extends AbstractFrame {
 		mailButton.setEnabled(false);
 		mailButton.setSize(200, 30);
 		mailButton.setLocation(10, 110);
-		addButton = new JButton("Data regels toevoegen");
+		addButton = new JButton("Dataregels toevoegen");
 		actionPanel.add(addButton);
 		addButton.setEnabled(false);
 		addButton.setSize(200, 30);
@@ -307,13 +308,17 @@ public class MainFrame extends AbstractFrame {
 		addButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (addFrame == null || !addFrame.isVisible()) {
-					addFrame = new AddFrame(envDir, MainFrame.this, mailWithAttachment);
+					addFrame = new AddFrame(envDir, MainFrame.this, mailWithAttachment, (addOrReplaceData ==2) ? true : false);
 					addWindowListener(addFrame);
 					addFrame.process();
 					addFrame.setLocation(420, 0);
 					addFrame.setVisible(true);
 					addFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-					messageLabel.setText("Toevoegen data regels");
+					if (addOrReplaceData == 2) {
+						messageLabel.setText("Overschrijven dataregels");
+					} else {
+						messageLabel.setText("Toevoegen dataregels");
+					}
 					initButton.setEnabled(false);
 					pdfButton.setEnabled(false);
 					mailButton.setEnabled(false);
@@ -418,10 +423,17 @@ public class MainFrame extends AbstractFrame {
 			return;
 		}
 		if (dataInProgress) {
-			if (inputData.areAllMailsSent()) {
+			int n = inputData.isProductionMailSendingInProgress();
+			if (n == 2) {
+				addButton.setText("Dataregels toevoegen");
 				addButton.setEnabled(true);
 			} else {
-				addButton.setEnabled(false);
+				if (n == 1) {
+					addButton.setText("Dataregels overschrijven");
+					addButton.setEnabled(true);
+				} else {
+					addButton.setEnabled(false);
+				}
 			}
 		} else {
 			cleanUpButton.setEnabled(false);
@@ -533,7 +545,7 @@ public class MainFrame extends AbstractFrame {
 		}
 		processResult.cleanup();
 		initButton.setEnabled(true);
-		
+
 	}
 
 	public void pdfFrameFinished(ProcessResult processResult) {
@@ -576,8 +588,14 @@ public class MainFrame extends AbstractFrame {
 
 	public void addFrameFinished(ProcessResult processResult) {
 		if (!processResult.hasResultErrors() && processResult.isActionExecuted()) {
-			messageLabel.setText("Data regels zijn toegevoegd.");
+			if (addOrReplaceData == 2) {
+				messageLabel.setText("Data regels zijn toegevoegd."); 
+			} else {
+				messageLabel.setText("Data regels verwijderd en toegevoegd");
+			}
 			inputData = processResult.getInputData();
+			addButton.setEnabled(false);
+			addOrReplaceData = 1;
 			dataInProgress = true;
 		} else if (processResult.hasResultErrors() && processResult.isActionExecuted()) {
 			messageLabel.setText("Er zijn fouten geconstateerd");

@@ -61,6 +61,9 @@ public class InputData {
 	public ArrayList<ArrayList<String>> getDataLines() {
 		return this.dataLines;
 	}
+	public void setDataLines(ArrayList<ArrayList<String>> data) {
+		this.dataLines = data;
+	}
 
 	public boolean isDocApplicable(ArrayList<String> cols) {
 		String pdf = cols.get(cols.size() - 2);
@@ -126,20 +129,21 @@ public class InputData {
 		return false;
 	}
 
-	public boolean isProductionMailSendingInProgress() {
+	public int isProductionMailSendingInProgress() { // 0 = no, 1 = partly, 2 = full
 		if (this.dataLines == null || this.dataLines.size() == 0) {
-			return false;
+			return 0;
 		}
+		int count = 0;
 		String mail = null;
 		for (ArrayList<String> cols : dataLines) {
 			mail = cols.get(cols.size() - 1);
 			if (mail.length() > 5) {
 				if (mail.substring(0, 5).equals("SENT,")) {
-					return true;
+					count++;
 				}
 			}
 		}
-		return false;
+		return (count == dataLines.size()) ? 2 : 1;
 	}
 
 	public boolean isReadyForMailing(boolean mailWithAttachment) {

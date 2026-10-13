@@ -11,9 +11,11 @@ public class AddFrame extends AbstractFrame {
 	private String dataFile;
 	private JButton executeButton;
 	private JLabel messageLabel = new JLabel();
+	private boolean overwrite;
 
-	public AddFrame(String envDir, MainFrame parent, boolean mailWithAttachment) {
+	public AddFrame(String envDir, MainFrame parent, boolean mailWithAttachment, boolean overwrite) {
 		super(envDir, parent, mailWithAttachment);
+		this.overwrite = overwrite;
 		this.setTitle("Spreadsheet regels toevoegen");
 		this.setSize(600, 500);
 		addWindowListener(new WindowAdapter() {
@@ -73,7 +75,7 @@ public class AddFrame extends AbstractFrame {
 				// call add data
 				executeButton.setEnabled(false);
 				executeButton.setText("Bezig....");
-				processResult = new AddData(envDir, dataFile, mailWithAttachment).process();
+				processResult = new AddData(envDir, dataFile, mailWithAttachment, overwrite).process();
 				processResult.setActionExecuted(true);
 				if (processResult.hasResultErrors()) {
 					setProcessResult(processResult, pane);

@@ -79,7 +79,7 @@ public class InitFrame extends AbstractFrame {
 		boolean skipInputData = false;
 		if (count == 5) {
 			InputData inputData = new InputData(envDir + PROGRESS_DIR + "/" + data);
-			if (inputData.isProductionMailSendingInProgress()) {
+			if (inputData.isProductionMailSendingInProgress() > 0) {
 				skipInputData = true;
 			}
 		}
@@ -87,8 +87,6 @@ public class InitFrame extends AbstractFrame {
 		pane.setLayout(null);
 		pane.setSize(this.getWidth(), this.getHeight());
 		this.add(pane);
-		JButton offerButton = new JButton("Ophalen clientgegevens");
-		File offer = new File(envDir + "/.offerte");
 		JLabel lbl1 = new JLabel("Je werkt in directory:");
 		lbl1.setLocation(10, 10);
 		lbl1.setSize(this.getWidth(), 20);
@@ -150,58 +148,58 @@ public class InitFrame extends AbstractFrame {
 		} else {
 			docIdx = 9999;
 		}
-		if (!offer.exists()) {
-			String[] htmlFiles = this.getMailHtmlFiles(); // mailing
-			String[] htmlCbList = new String[htmlFiles.length + 1];
-			htmlCbList[0] = "Kies een ftlx-template als html-email";
-			for (int i = 0; i < htmlFiles.length; i++) {
-				htmlCbList[i + 1] = htmlFiles[i];
-			}
-			final JComboBox<String> htmlCb = new JComboBox<String>(htmlCbList);
-			pane.add(htmlCb);
 
-			htmlCb.setSize(220, 20);
-			JLabel lbl5 = new JLabel("Keuze html formaat mailing:");
-			pane.add(lbl5);
-			lbl5.setSize(220, 16);
-			lbl5.setLocation(10, 120);
-			htmlCb.setLocation(230, 120);
-
-			htmlCb.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					mailHtmlIdx = htmlCb.getSelectedIndex();
-					if (mailHtmlIdx == 0) {
-						return;
-					}
-					mailHtmlFile = htmlCbList[mailHtmlIdx];
-				}
-			});
-			String[] txtFiles = this.getMailTextFiles(); // mailing
-			String[] txtCbList = new String[txtFiles.length + 1];
-			txtCbList[0] = "Keuze text formaat mailing:";
-			for (int i = 0; i < txtFiles.length; i++) {
-				txtCbList[i + 1] = txtFiles[i];
-			}
-			final JComboBox<String> txtCb = new JComboBox<String>(txtCbList);
-			pane.add(txtCb);
-
-			txtCb.setSize(220, 20);
-			JLabel lbl6 = new JLabel("Keuze tekst formaat mailing:");
-			pane.add(lbl6);
-			lbl6.setSize(220, 16);
-			lbl6.setLocation(10, 150);
-			txtCb.setLocation(230, 150);
-
-			txtCb.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					mailTextIdx = txtCb.getSelectedIndex();
-					if (mailTextIdx == 0) {
-						return;
-					}
-					mailTextFile = txtCbList[mailTextIdx];
-				}
-			});
+		String[] htmlFiles = this.getMailHtmlFiles(); // mailing
+		String[] htmlCbList = new String[htmlFiles.length + 1];
+		htmlCbList[0] = "Kies een ftlx-template als html-email";
+		for (int i = 0; i < htmlFiles.length; i++) {
+			htmlCbList[i + 1] = htmlFiles[i];
 		}
+		final JComboBox<String> htmlCb = new JComboBox<String>(htmlCbList);
+		pane.add(htmlCb);
+
+		htmlCb.setSize(220, 20);
+		JLabel lbl5 = new JLabel("Keuze html formaat mailing:");
+		pane.add(lbl5);
+		lbl5.setSize(220, 16);
+		lbl5.setLocation(10, 120);
+		htmlCb.setLocation(230, 120);
+
+		htmlCb.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				mailHtmlIdx = htmlCb.getSelectedIndex();
+				if (mailHtmlIdx == 0) {
+					return;
+				}
+				mailHtmlFile = htmlCbList[mailHtmlIdx];
+			}
+		});
+		String[] txtFiles = this.getMailTextFiles(); // mailing
+		String[] txtCbList = new String[txtFiles.length + 1];
+		txtCbList[0] = "Keuze text formaat mailing:";
+		for (int i = 0; i < txtFiles.length; i++) {
+			txtCbList[i + 1] = txtFiles[i];
+		}
+		final JComboBox<String> txtCb = new JComboBox<String>(txtCbList);
+		pane.add(txtCb);
+
+		txtCb.setSize(220, 20);
+		JLabel lbl6 = new JLabel("Keuze tekst formaat mailing:");
+		pane.add(lbl6);
+		lbl6.setSize(220, 16);
+		lbl6.setLocation(10, 150);
+		txtCb.setLocation(230, 150);
+
+		txtCb.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				mailTextIdx = txtCb.getSelectedIndex();
+				if (mailTextIdx == 0) {
+					return;
+				}
+				mailTextFile = txtCbList[mailTextIdx];
+			}
+		});
+
 		String[] propsFiles = this.getPropsFiles();
 		String[] propsCbList = new String[propsFiles.length + 1];
 		propsCbList[0] = "Kies een configuratie bestand";
